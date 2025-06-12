@@ -1,0 +1,71 @@
+html{
+	--main: #5B4B49;
+	--secondary: #CAF7E2;
+	--tertiary: #63ADF2;
+}
+body{
+	font-family: "Gisha", sans-serif;
+	background-color: var(--main);
+}
+.pri, h1{
+	color: var(--secondary);
+	font-size: 3em;
+	line-height: 1em;
+}
+.sec, h2{
+	color: var(--tertiary);
+	font-size: 2em;
+	line-height: 1.618em;
+}
+h1,h2{
+	margin-left: 1rem;
+}
+.point{
+	width: 2em;
+	height: 2em;
+	background-color: var(--main);
+	border: 0.1em solid var(--tertiary);
+	border-radius: 50%;
+	position: absolute;
+	top: 10rem;
+	transition: 1s;
+	opacity: 0;
+	display: grid;
+	place-items: center;
+	}
+.point :is(span){
+	color: var(--secondary);
+	font-size: calc(2em / 1.618);
+	margin-top: 0.7em;
+	margin-left: 0.7em;
+	width: 3em;
+	height: 3em;
+	background: linear-gradient(to top right, rgba(0,0,0,0) calc(50% - 1px), var(--secondary) , rgba(0,0,0,0)  calc(50% + 1px) );
+}
+#yourself :is(span){
+		background: linear-gradient(to bottom right, rgba(0,0,0,0) calc(50% - 1px), var(--secondary)  , rgba(0,0,0,0)  calc(50% + 1px) );
+		margin-left: -3.3em;
+}
+.point :is(text){
+	margin-top:3em;
+	width: 100vw;
+	display: block;
+}
+#pointA{
+	left: calc(10vw - 1em);
+}
+#yourself{
+	left: calc(65vw - 1em);
+}
+#appUwant{
+	left: calc(70vw - 1em);
+}
+#pointA :is(text){
+	margin-left: 3em;
+}
+#yourself :is(text){
+	margin-left: -3em;
+}
+#appUwant :is(text){
+	margin-left: 3em;
+}
